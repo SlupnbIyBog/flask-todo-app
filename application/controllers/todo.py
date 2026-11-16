@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 import flask
 from flask import request, redirect, flash, render_template, url_for
@@ -25,7 +25,7 @@ def index():
             flash("add task successfully!")
             return redirect(url_for('todo.index'))
         except Exception as e:
-            print e
+            print(e)
             flash("fail to add task!")
 
     return render_template('index.html', todo=todo)
